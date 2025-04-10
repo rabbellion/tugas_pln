@@ -1,0 +1,16 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 9vh;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+.logo, .clock, .login {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    color: #ffb300;
+}
