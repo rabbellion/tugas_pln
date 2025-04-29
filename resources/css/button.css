@@ -1,0 +1,27 @@
+.btn{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary{
+    background-color: rgb(255, 162, 0);
+    color: white;
+}
+
+.btn-secondary{
+    background-color: transparent;
+    border: 1px solid rgb(255, 162, 0);
+}
+
+.btn-defblue{
+    background-color: rgb(10, 10, 48);
+    color: white;
+}
+
+.btn-defyellow{
+    background-color: yellow;
+}

@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import './navbar.css';
 @import './laporan.css';
+@import './button.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -13,5 +14,5 @@
 }
 
 body{
-    background-color: #1f3847;
+    background-color: #d9d9d9;
 }

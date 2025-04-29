@@ -1,8 +1,15 @@
-<link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-<script src="{{ asset('js/clock.js') }}" defer></script>
+@props(['type' => 'default'])
 
-<nav class="navbar">
-    <div class="logo">PLN</div>
-    <div class="clock" id="clock">00:00:00</div>
-    <div class="login">Login</div>
+@if($type === 'admin')
+<nav class="navbar-adm">
+    <div class="components">
+        <img src="{{  asset('img/pln.png') }}" alt="logo" width="100" height="100"/>
+        <div class="jam">pppp</div>
+        <div class="">vsss</div>
+    </div>
 </nav>
+@elseif($type === 'user')
+<nav class="nvbar-user">hai</nav>
+@else($type === 'guest')
+<nav class="navbar-guest">pppp</nav>
+@endif

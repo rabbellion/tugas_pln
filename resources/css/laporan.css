@@ -2,6 +2,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f2f3f5;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -24,30 +25,70 @@ h2 {
 .tab-menu {
     display: flex;
     margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .tab {
     flex: 1;
     padding: 10px;
     background-color: #1d2d50;
-    color: #fff;
+    color: grey;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
+    transition: background 0.3s;
 }
 
 .tab.active {
-    background-color: #fff;
-    color: #f9a826;
+    background-color: #f9a826;
     border-bottom: 3px solid #e4e6e9;
+    color: white;
 }
 
-form label {
-    display: block;
-    margin-top: 3px;
+form{
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateX(50px);
+    position: absolute;
+    display: flex;
+    width: 100%;
+}
+
+
+form.active{
+    opacity: 1;
+    
+    transform: translateX(0);
+    position: relative;
+}
+
+.form-container{
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.tab-menu{
+    display: flex;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.form-group{
+    display: flex;
+    align-items: flex-start;
+    padding: 0.3rem;
+}
+
+
+.form-group label {
+    width: 100px;
     color: #e09f25;
     font-weight: bold;
+    margin-top: 8px;
 }
 
 .required {
@@ -55,26 +96,35 @@ form label {
     margin-left: 3px;
 }
 
-input[type="text"],
-textarea,
-select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    margin-bottom: 10px;
-    border: 2px solid #f9a826;
-    border-radius: 6px;
-    background-color: #fff;
-    resize: none;
-}
-
-.select-row {
+.select-group{
     display: flex;
+    justify-content: center;
+    width: 81%;
     gap: 10px;
 }
 
-.select-row select {
+.select-group select {
     flex: 1;
+    padding: 0.7rem;
+    border: 2px solid orange;
+    border-radius: 6px;
+    width: 120%;
+    background-color: white;
+}
+
+.form-group input,
+.form-group textarea{
+    flex: 1;
+    padding: 8px;
+    border: 2px solid #f9a826;
+    border-radius: 6px;
+    color: black;
+    resize: none;
+    background-color: #fff;
+}
+
+textarea{
+    height: 70px
 }
 
 .btn-kirim {
@@ -94,9 +144,16 @@ select {
     background-color: #163063;
 }
 
-.info-text {
+.check-box .info-text {
     font-size: 0.8rem;
     color: #555;
     margin-top: 1rem;
     line-height: 1.4;
 }
+
+.check-box{
+    display: flex;
+    gap: 10px;
+}
+
+
